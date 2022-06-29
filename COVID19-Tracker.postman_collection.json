@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "879557e0-8770-426b-90ac-0c1b2acc4e84",
+		"name": "COVID19-Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14751842"
+	},
+	"item": [
+		{
+			"name": "General Stats",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coronavirus-19-api.herokuapp.com/all",
+					"protocol": "https",
+					"host": [
+						"coronavirus-19-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Country Stas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coronavirus-19-api.herokuapp.com/countries",
+					"protocol": "https",
+					"host": [
+						"coronavirus-19-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Country Specific",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://coronavirus-19-api.herokuapp.com/countries/india",
+					"protocol": "https",
+					"host": [
+						"coronavirus-19-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"countries",
+						"india"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
